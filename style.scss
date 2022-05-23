@@ -1,0 +1,233 @@
+$primary: hsl(26, 100%, 55%);
+$secondary: hsl(219, 9%, 45%);
+$dark: hsl(220, 13%, 13%);
+$white: hsl(223, 64%, 98%);
+$warning: hsl(25, 100%, 94%);
+$info: #fff;
+$danger: hsl(220, 14%, 75%);
+$border-radius: 0.5rem;
+$border-radius-lg: 0.7rem;
+$popover-bg: #fff;
+$popover-body-padding-y: 1rem;
+$popover-body-padding-x: 1rem;
+$popover-border-radius: $border-radius;
+
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "./node_modules/animate.css/animate.min.css";
+
+:root {
+  --my-primary: hsl(26, 100%, 55%);
+  --my-primary-accent: hsla(26, 100%, 55%, 0.401);
+  --my-primary-shadow-sm: hsla(26, 100%, 55%, 0.261);
+  --my-secondary: hsl(220, 14%, 75%);
+  --my-btn-dark: hsl(220, 13%, 13%);
+  --my-body-bg: hsl(0, 0%, 100%);
+}
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: var(--my-body-bg);
+}
+
+.card {
+  border: none;
+}
+
+/* navv */
+.myNav {
+  border-bottom: 1.2px solid var(--my-secondary);
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  text-decoration: none;
+  color: var(--my-secondary);
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: var(--my-btn-dark);
+}
+
+.activeNav .main-nav-link::after {
+  transform: scaleX(1);
+}
+
+.main-nav-link::after {
+  display: block;
+  position: absolute;
+  top: 98%;
+  left: 0%;
+  content: "";
+  width: 100%;
+  height: 3px;
+  background: var(--my-primary);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.main-nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.iconCart:hover svg path {
+  fill: var(--my-btn-dark);
+}
+
+.profileBtn {
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.profile {
+  width: 2.6rem;
+  transition: all 0.4s;
+}
+
+.profile:hover {
+  box-shadow: 0 0 0 2px var(--my-primary);
+}
+
+/* main containers */
+.thumbnail-container img {
+  width: 70px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.thumbnail-container img:hover {
+  opacity: 0.5;
+}
+
+.active-state-img {
+  opacity: 0.4;
+}
+
+.active-border {
+  box-shadow: 0 0 0 2px var(--my-primary);
+  transition: all 0.4s;
+}
+
+.activeMyCard {
+  animation: fadeIn 1s ease;
+}
+
+.btns button {
+  transition: 0.1s;
+}
+
+.btns button:active {
+  transform: scale(0.98);
+}
+
+.addCartBtn {
+  box-shadow: 0px 8px 15px var(--my-primary-shadow-sm);
+  transition: all 0.3s ease 0s;
+}
+
+.addCartBtn:hover {
+  box-shadow: 0px 15px 20px var(--my-primary-accent);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.title {
+  letter-spacing: 1.5px;
+}
+
+.fs-5 {
+  font-size: 1rem !important;
+}
+
+.btnControl {
+  padding: 0.8rem 0;
+  font-size: 0.9rem;
+}
+
+.popover {
+  min-width: 300px;
+  min-height: 250px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  border: none;
+}
+
+.popover-body {
+  height: 250px;
+}
+
+/* mobile nav */
+/* mobile menu */
+.btn-mobile {
+  border: none;
+  background: none;
+}
+
+/* bs prev next btn */
+.control-btn-carousel-prev,
+.control-btn-carousel-next {
+  border-radius: 50%;
+  background-color: var(--my-body-bg);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  z-index: 50;
+  outline: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.control-btn-carousel-prev {
+  left: 5px;
+}
+
+.control-btn-carousel-next {
+  right: 5px;
+}
+
+.control-btn-carousel-prev:hover svg path,
+.control-btn-carousel-next:hover svg path {
+  stroke: var(--my-primary);
+}
+
+@media (max-width: 992px) {
+  .main-nav-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 55%;
+    background-color: var(--my-body-bg);
+    padding-top: 2rem;
+    transform: translateX(-140%);
+    transition: all 0.4s ease-in;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    z-index: 300;
+  }
+
+  .main-nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem !important;
+  }
+
+  .nav-open .main-nav-wrapper {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .main-nav-link {
+    color: var(--my-btn-dark) !important;
+    font-weight: bolder;
+  }
+}

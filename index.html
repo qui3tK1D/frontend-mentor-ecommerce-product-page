@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | E-commerce product page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(26, 100%, 55%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-light myNav p-0 pt-3">
+        <div class="container p-0 align-items-center animate__animated animate__fadeIn">
+          <button class="btn-mobile d-lg-none d-block me-3">
+            <img src="images/icon-menu.svg" alt="" />
+          </button>
+
+          <div class="d-flex me-auto">
+            <img src="images/logo.svg" class="d-inline-block me-5" alt="" />
+          </div>
+
+          <nav class="main-nav-wrapper me-auto">
+            <ul
+              class="main-nav-list d-flex justify-content-lg-center gap-4 list-unstyled mb-0"
+            >
+              <button class="btn-mobile d-lg-none d-block">
+                <img src="images/icon-close.svg" alt="" />
+              </button>
+
+              <li class="py-4 position-relative">
+                <a class="main-nav-link" href="#">Collections</a>
+              </li>
+              <li class="py-4 position-relative">
+                <a class="main-nav-link" href="#">Men</a>
+              </li>
+              <li class="activeNav py-4 position-relative">
+                <a class="main-nav-link" href="#">Woman</a>
+              </li>
+              <li class="py-4 position-relative">
+                <a class="main-nav-link" href="#">About</a>
+              </li>
+              <li class="py-4 position-relative">
+                <a class="main-nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="">
+            <button class="btn iconCart me-2" id="example">
+              <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                  fill="#69707D"
+                  fill-rule="nonzero"
+                />
+              </svg>
+            </button>
+            <button class="profileBtn">
+              <img
+                src="images/image-avatar.png"
+                class="profile rounded-pill"
+                alt=""
+              />
+            </button>
+          </div>
+        </div>
+      </nav>
+      <div class="row justify-content-center align-items-center">
+        <div
+          class="col-11 col-sm-10 col-lg-5 col-xl-4 col-xxl-6 mb-5 me-md-0 me-lg-5 mt-5 me-xxl-0"
+        >
+          <div class="row justify-content-xxl-center">
+            <div class="col-12 d-lg-none d-block slideBot">
+              <div
+                id="carouselExampleControls"
+                class="carousel slide carousel-fade"
+                data-bs-touch="false"
+                data-bs-interval="false"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="images/image-product-1.jpg"
+                      alt=""
+                      class="img-fluid rounded-3 shadow-sm"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/image-product-2.jpg"
+                      alt=""
+                      class="img-fluid rounded-3 shadow-sm"
+                    />
+                  </div>
+
+                  <div class="carousel-item">
+                    <img
+                      src="images/image-product-3.jpg"
+                      alt=""
+                      class="img-fluid rounded-3 shadow-sm"
+                    />
+                  </div>
+
+                  <div class="carousel-item">
+                    <img
+                      src="images/image-product-4.jpg"
+                      alt=""
+                      class="img-fluid rounded-3 shadow-sm"
+                    />
+                  </div>
+                  <button
+                    class="control-btn-carousel-prev"
+                    type="button"
+                    data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev"
+                  >
+                    <svg
+                      width="12"
+                      height="18"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11 1 3 9l8 8"
+                        stroke="#1D2026"
+                        stroke-width="3"
+                        fill="none"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="control-btn-carousel-next"
+                    type="button"
+                    data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next"
+                  >
+                    <svg
+                      width="13"
+                      height="18"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="m2 1 8 8-8 8"
+                        stroke="#1D2026"
+                        stroke-width="2"
+                        fill="none"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-xxl-8 d-none d-lg-block slideLeft">
+              <img
+                src="images/image-product-1.jpg"
+                alt=""
+                class="img-fluid myCardImg rounded-3 d-block shadow-sm"
+                id="img1"
+              />
+
+              <img
+                src="images/image-product-2.jpg"
+                class="img-fluid myCardImg rounded-3 d-none shadow-sm"
+                alt=""
+                id="img2"
+              />
+              <img
+                src="images/image-product-3.jpg"
+                class="img-fluid myCardImg rounded-3 d-none shadow-sm"
+                alt=""
+                id="img3"
+              />
+              <img
+                src="images/image-product-4.jpg"
+                class="img-fluid myCardImg rounded-3 d-none shadow-sm"
+                alt=""
+                id="img4"
+              />
+            </div>
+            <div class="col-12 col-xxl-8 d-none d-lg-block">
+              <div
+                class="d-flex justify-content-between thumbnail-container mt-4"
+              >
+                <div class="active-border rounded-2 overflow-hidden borderDiv slideLeft">
+                  <img
+                    src="images/image-product-1-thumbnail.jpg"
+                    alt=""
+                    class="active-state-img thumbnails shadow-sm slideLeft"
+                    data-img="1"
+                  />
+                </div>
+                <div class="rounded-2 overflow-hidden borderDiv">
+                  <img
+                    src="images/image-product-2-thumbnail.jpg"
+                    alt=""
+                    class="rounded-2 thumbnails shadow-sm slideLeft"
+                    data-img="2"
+                  />
+                </div>
+                <div class="rounded-2 overflow-hidden borderDiv">
+                  <img
+                    src="images/image-product-3-thumbnail.jpg "
+                    alt=""
+                    class="rounded-2 thumbnails shadow-sm slideLeft"
+                    data-img="3"
+                  />
+                </div>
+                <div class="rounded-2 overflow-hidden borderDiv">
+                  <img
+                    src="images/image-product-4-thumbnail.jpg"
+                    alt=""
+                    class="rounded-2 thumbnails shadow-sm slideLeft"
+                    data-img="4"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-11 col-sm-10 col-lg-5 mb-4">
+          <div class=''>
+            <small class="text-primary fw-bold text-uppercase title slideBot">Sneaker Company</small>
+            <h1 class="fw-bold mt-2 text-dark slideBot">
+              Fall Limited Edition Sneakers
+            </h1>
+            <p class="text-secondary my-4 fw-normal slideBot">
+              These low-profile sneakers are your perfect casual wear companion.
+              Featuring a durable rubber outer sole, they’ll withstand
+              everything the weather can offer.
+            </p>
+
+            <div class="row">
+              <div class="col-lg-12 col-6">
+                <div class="d-flex align-items-center gap-3">
+                  <h3 class="fw-bold d-inline mb-0 price slideBot">$125.00</h3>
+                  <span class="badge bg-warning text-primary fs-5 slideBot">50%</span>
+                </div>
+              </div>
+              <div class="col-lg-12 col-6">
+                <span
+                  class="d-block text-danger fw-bold mt-lg-2 mt-0 mb-4 text-lg-start text-end total-price"
+                  ><del class="original-price me-3 slideBot">$250.00</del>
+                </span>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xl-4 mb-xl-0 mb-3 slideBot">
+                <div
+                  class="btn-group bg-white rounded-2 btns w-100 h-100"
+                  role="group"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-white d-flex align-items-center justify-content-center px-3 btnMinus"
+                  >
+                    <img src="images/icon-minus.svg" alt="" class="plus" />
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-white d-flex align-items-center justify-content-center text-dark fw-bold px-3 quantity"
+                  >
+                    0
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-white d-flex align-items-center justify-content-center px-3 btnPlus"
+                  >
+                    <img src="images/icon-plus.svg" alt="" class="minus" />
+                  </button>
+                </div>
+              </div>
+
+              <div class="col-xl-7">
+                <button
+                  class="btn btn-primary addCartBtn text-white rounded-2 d-flex align-items-center justify-content-center gap-3 btnControl w-100 addToCart slideBot"
+                >
+                  <svg
+                    width="22"
+                    height="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                      fill="hsl(223, 64%, 98%)"
+                      fill-rule="nonzero"
+                    />
+                  </svg>
+                  <span class="fw-bold slideBot">Add to cart</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Qui3tK1D</a>.
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
